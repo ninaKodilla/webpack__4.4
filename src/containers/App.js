@@ -15,6 +15,7 @@ class App extends React.Component {
             text: val,
             id: uuid.v4(),
         };
+
         const data = [...this.state.data, todo];
         this.setState({data});
     }
@@ -25,10 +26,9 @@ class App extends React.Component {
     }
 
     render() {
-
         return (
             <div className={style.TodoApp}>
-                <Title  counter={this.state.data.length}/>
+                <Title counter={this.state.data.length}/>
                 Tutaj pojawią się komponenty naszej aplikacji.
             </div>
         );
